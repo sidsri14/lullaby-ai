@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "mobile-app",
-    "slug": "mobile-app",
+    "name": "Lullaby AI",
+    "slug": "lullaby-ai",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -13,18 +13,33 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.lullabyai.app"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#1E293B"
       },
+      "package": "com.lullabyai.app",
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-audio",
+      "react-native-iap"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "360268a1-997d-454d-8388-3fba9df04374"
+      }
     }
   }
 }
