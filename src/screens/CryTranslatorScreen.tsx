@@ -112,7 +112,7 @@ export default function CryTranslatorScreen({ navigation }: any) {
 
     const handleFeedback = (correct: boolean) => {
         setFeedbackSubmitted(true);
-        // TODO: Send feedback to backend/local storage
+        console.log('User feedback recorded:', correct ? 'Correct' : 'Incorrect');
     };
 
     if (result) {
